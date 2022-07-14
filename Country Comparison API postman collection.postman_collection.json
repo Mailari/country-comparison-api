@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "e3dd4aad-2cec-40d9-9e74-0361c8d6ecf7",
+		"name": "Country Comparison API postman collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Countries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/v1/countries?refresh=false",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"countries"
+					],
+					"query": [
+						{
+							"key": "refresh",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Population of countries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/v1/populations/AFRICA,Algeria,Antigua and Barbuda,China,AFRICA,India?date=2022-07-16T18:51:06.817Z",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"populations",
+						"AFRICA,Algeria,Antigua and Barbuda,China,AFRICA,India"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2022-07-16T18:51:06.817Z"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
