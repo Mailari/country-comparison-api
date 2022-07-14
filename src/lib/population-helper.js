@@ -1,7 +1,7 @@
 const { axiosInstance: axios } = require("./axios-helper");
 const { Countries } = require("./country-helper");
 
-exports.getCountryPopulation = async function getCountryPopulation(_countries, sort, _date) {
+exports.getCountryPopulation = async function getCountryPopulation(_countries, _date, sort) {
   // remove duplicate names if any
   const countries = Array.from(new Set(_countries));
 
@@ -27,8 +27,10 @@ exports.getCountryPopulation = async function getCountryPopulation(_countries, s
     let countries = [];
     if (sort === "asc") {
       countries = list.sort((a, b) => a.population - b.population);
-    } else {
+    } else if (sort === "desc") {
       countries = list.sort((a, b) => b.population - a.population);
+    } else {
+      countries = list;
     }
     return countries;
   });

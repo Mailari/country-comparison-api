@@ -49,3 +49,32 @@ Zip your solution, upload it somewhere, and send us a link to the zipped file.
 
 <br>
 <i><a name="footnote1"><sup>1</sup></a> Joe says that api.population.io is down, so try https://d6wn6bmjj722w.population.io/ as the host instead.<i>
+
+---
+
+## Requirement Implementation
+
+### Pre-requisites
+
+- Service Url Used : <i>https://d6wn6bmjj722w.population.io/1.0/<i>
+- For http client Axios used [npm package axios](https://www.npmjs.com/package/axios)
+- can Service url is made environment variable and can be updated by
+
+```bash
+export SERVICE_URL=https://example.domain.com/1.0/
+```
+
+### Implementation
+
+1. Updated endpoint GET '/api/v1/countries' to pull country data with service url.
+2. Implemented the GET '/api/v1/populations/:countries' api where user can fetch population details by passing list of countries they provided.
+
+### More Options
+
+- In GET '/api/v1/populations/:countries' API in order to sorted population details add query parameters sort as `asc` or `desc`
+
+  `GET '/api/v1/populations/:countries?sort=desc'`
+
+- By default GET '/api/v1/populations/:countries' will return the population details based on the current date. If we need details based on the desired `date`, we can pass the query parameter date with ISO Format `2022-07-16T18:51:06.817Z`.
+
+  note: Date should be in between `2013-01-01` and `2022-12-31` as the service support only so.
