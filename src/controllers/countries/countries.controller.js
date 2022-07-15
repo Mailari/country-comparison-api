@@ -8,7 +8,7 @@ const populationHelper = require("../../lib/population-helper");
 exports.getCountries = co.wrap(async (req, res, next) => {
   {
     try {
-      const refresh = req.query?.refresh === "true" ? true : false;
+      const refresh = req.query.refresh && req.query.refresh === "true" ? true : false;
       const countries = await countryHelper.getCountries(refresh);
       res.json(countries);
       return next();
