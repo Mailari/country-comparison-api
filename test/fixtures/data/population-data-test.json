@@ -1,4 +1,46 @@
 {
   "validCountryNames": "AFRICA,India",
-  "invalidCountryNames": "AFRICA,In"
+  "invalidCountryNames": "AFRICA,In",
+  "mockPopulationData": [
+    {
+      "country": "India",
+      "population": 1234
+    },
+    {
+      "country": "AFRICA",
+      "population": 12341234
+    },
+    {
+      "country": "Afghanistan",
+      "population": 12345
+    }
+  ],
+  "ascending_order_populationData": [
+    {
+      "country": "India",
+      "population": 1234
+    },
+    {
+      "country": "Afghanistan",
+      "population": 12345
+    },
+    {
+      "country": "AFRICA",
+      "population": 12341234
+    }
+  ],
+  "descending_order_populationData": [
+    {
+      "country": "AFRICA",
+      "population": 12341234
+    },
+    {
+      "country": "Afghanistan",
+      "population": 12345
+    },
+    {
+      "country": "India",
+      "population": 1234
+    }
+  ]
 }
